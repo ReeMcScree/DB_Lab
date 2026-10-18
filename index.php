@@ -64,7 +64,7 @@
           </div>
        </nav>
        <h1>Dashboard</h1>
-       <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
+       <p>Welcome <?php echo htmlspecialchars($_SESSION['username'] ?? 'Guest'); ?>!</p>
        <br>
        <div class="indented-container">
            <h2>Checked out Books</h2>
