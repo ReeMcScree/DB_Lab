@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- include bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- use css stylesheet -->
+        <link rel="stylesheet" href="style.css">
+    <!-- temporary style -->
+        <style>
+            table {
+                border-collapse: separate;
+                border-radius: 15px;
+                border-spacing: 0;
+                border: 1px solid #dddddd;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            th {
+                border: 1px solid #dddddd;
+                border-top: none;
+                text-align: left;
+                padding: 8px;
+            }
+            td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even) {
+                background-color: #8B949B;
+            }
+            table tr th:first-child, 
+            table tr td:first-child {
+                border-left: none;
+            }
+            th:last-child, 
+            td:last-child {
+                border-right: none;
+            }
+            tr:last-child td {
+                border-bottom: none;
+            }
+            .indented-container {
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+    <!-- NAV -->
+       <nav class="navbar navbar-expand bg-secondary">
+          <div class="container-fluid justify-content-center">
+             <div class="navbar-nav">
+                <a class="nav-link text-white" href="index.php">Dashboard</a>
+                <a class="nav-link text-white" href="checkout.html">Checkout</a>
+                <a class="nav-link text-white" href="sign-in.html">Sign In</a>
+                <a class="nav-link text-white" href="sign-up.html">Sign Up</a>
+             </div>
+          </div>
+       </nav>
+       <h1>Dashboard</h1>
+       <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
+       <br>
+       <div class="indented-container">
+           <h2>Checked out Books</h2>
+           <table class="bg-secondary">
+              <tr>
+                <th>Title</th>
+                <th>Checkout Date</th>
+                <th>Due Date</th>
+                <th>Days Until Due</th>
+              </tr>
+              <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>1/21/01</td>
+                <td>2/15/01</td>
+                <td>-1684</td>
+              </tr>
+              <tr>
+                <td>The Hobbit</td>
+                <td>10/11/26</td>
+                <td>10/25/26</td>
+                <td>7</td>
+              </tr>
+            </table>
+        </div>
+    </body>
+</html>
