@@ -1,0 +1,102 @@
+
+/* Style the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 30px;
+    color: #222222;
+}
+
+/* Main heading */
+h1 {
+    color: #1a1a1a;
+    text-align: center;
+}
+
+/* Paragraph below heading */
+body > p {
+    text-align: center;
+    color: #555555;
+}
+
+/* Search input */
+#searchInput {
+    padding: 12px;
+    width: 55%;
+    max-width: 450px;
+    border: 1px solid #999999;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 18px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #555555;
+}
+
+/* Unavailable button */
+button:disabled {
+    background-color: #aaaaaa;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+/* Book cards */
+.book {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+}
+
+/* Book title */
+.book h3 {
+    color: #222222;
+    margin-top: 0;
+}
+
+/* Category dropdown */
+#categoryFilter {
+    padding: 8px;
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #999999;
+    border-radius: 6px;
+}
+
+/* No results message */
+#noResults {
+    text-align: center;
+    color: #666666;
+    padding: 20px;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #333333 !important;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar .nav-link:hover {
+    color: #dddddd !important;
+}
