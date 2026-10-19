@@ -1,96 +1,25 @@
 
-/* Style the entire page */
+/* ==============================
+   BOOK SEARCH PAGE
+   ============================== */
+
+/* Main Page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #d3d3d3;
+    color: #111111;
     margin: 0;
-    padding: 30px;
-    color: #222222;
+    padding: 0;
 }
 
-/* Main heading */
-h1 {
-    color: #1a1a1a;
-    text-align: center;
-}
 
-/* Paragraph below heading */
-body > p {
-    text-align: center;
-    color: #555555;
-}
 
-/* Search input */
-#searchInput {
-    padding: 12px;
-    width: 55%;
-    max-width: 450px;
-    border: 1px solid #999999;
-    border-radius: 6px;
-    background-color: #ffffff;
-    color: #222222;
-    font-size: 16px;
-}
-
-/* Buttons */
-button {
-    padding: 12px 18px;
-    background-color: #333333;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* Hover effect */
-button:hover {
-    background-color: #555555;
-}
-
-/* Unavailable button */
-button:disabled {
-    background-color: #aaaaaa;
-    color: #ffffff;
-    cursor: not-allowed;
-}
-
-/* Book cards */
-.book {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    border: 1px solid #cccccc;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
-}
-
-/* Book title */
-.book h3 {
-    color: #222222;
-    margin-top: 0;
-}
-
-/* Category dropdown */
-#categoryFilter {
-    padding: 8px;
-    background-color: #ffffff;
-    color: #222222;
-    border: 1px solid #999999;
-    border-radius: 6px;
-}
-
-/* No results message */
-#noResults {
-    text-align: center;
-    color: #666666;
-    padding: 20px;
-}
-
-/* Navigation bar */
 .navbar {
-    background-color: #333333 !important;
-    border-radius: 6px;
-    margin-bottom: 25px;
+    background-color: #6c757d !important;
+    border-radius: 0;
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
 }
 
 .navbar .nav-link {
@@ -99,4 +28,187 @@ button:disabled {
 
 .navbar .nav-link:hover {
     color: #dddddd !important;
+}
+
+/* ==============================
+   HEADINGS AND TEXT
+   ============================== */
+
+h1 {
+    color: #111111;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    color: #222222;
+    margin-top: 20px;
+}
+
+/* Page Description */
+body > p {
+    text-align: center;
+    color: #333333;
+}
+
+/* ==============================
+   SEARCH BAR
+   ============================== */
+
+#searchInput {
+    padding: 12px;
+    width: 55%;
+    max-width: 450px;
+    border: 1px solid #888888;
+    border-radius: 6px;
+    background-color: #eeeeee;
+    color: #111111;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+/* Search Input Focus */
+#searchInput:focus {
+    outline: 2px solid #555555;
+    border-color: #333333;
+}
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+button {
+    padding: 12px 18px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Button Hover */
+button:hover:not(:disabled) {
+    background-color: #555555;
+}
+
+/* Disabled Button */
+button:disabled {
+    background-color: #999999;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+/* ==============================
+   CATEGORY FILTER
+   ============================== */
+
+#categoryFilter {
+    padding: 10px;
+    background-color: #eeeeee;
+    color: #111111;
+    border: 1px solid #888888;
+    border-radius: 6px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Category Heading */
+body > h3 {
+    margin-left: 25px;
+}
+
+/* ==============================
+   AVAILABLE BOOKS
+   ============================== */
+
+body > h2 {
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+/* Book Cards */
+.book {
+    background-color: #555555;
+    color: #ffffff;
+    padding: 20px;
+    margin: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Book Title */
+.book h3 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Book Details */
+.book p {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Book Checkout Button */
+.book button {
+    background-color: #222222;
+    margin-top: 10px;
+}
+
+.book button:hover:not(:disabled) {
+    background-color: #444444;
+}
+
+.book button:disabled {
+    background-color: #888888;
+}
+
+/* ==============================
+   NO RESULTS MESSAGE
+   ============================== */
+
+#noResults {
+    text-align: center;
+    color: #333333;
+    padding: 20px;
+    margin: 20px 25px;
+    font-size: 17px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 26px;
+        padding: 0 15px;
+    }
+
+    #searchInput {
+        width: calc(100% - 50px);
+        max-width: none;
+        margin-right: 25px;
+        margin-bottom: 10px;
+    }
+
+    #categoryFilter {
+        max-width: calc(100% - 50px);
+    }
+
+    .book {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .navbar .nav-link {
+        font-size: 13px;
+        padding: 8px;
+    }
 }
